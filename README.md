@@ -63,33 +63,12 @@ npx hardhat run scripts/deploy.js --network localhost
 
 #### Testnet/Mainnet Deployment
 
-To deploy to a testnet or mainnet, configure the network in `hardhat.config.js` with your credentials (example, Sepolia testnet):
-
-```javascript
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-verify");
-require("dotenv").config();
-
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.24",
-  networks: {
-    sepolia: {
-      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
-      accounts: [process.env.PRIVATE_KEY]
-    }
-  },
-  etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
-  }
-};
-
-```
+To deploy to a testnet or mainnet, configure the network in `hardhat.config.js` with your credentials (example, Lisk Sepolia testnet):
 
 Then deploy:
 
 ```bash
-npx hardhat run scripts/deploy.js --network sepolia
+npx hardhat run scripts/deploy.js --network lisk-sepolia
 ```
 
 ### 5. Interact with the Contract
