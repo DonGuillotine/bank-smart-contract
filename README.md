@@ -95,6 +95,8 @@ The tests include:
 - **Transfers**: Ensures that transfers only succeed if the sender has enough balance.
 - **Insufficient Balance Checks**: Ensures that transactions fail when balances are insufficient.
 
+![alt text](image.png)
+
 ### 7. Project Structure
 
 - `contracts/`: Contains the Solidity smart contract.
